@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px solid #9e8888;
+      text-align: left;
+      padding: 8px;
+
+
+    }
+
+    tr:nth-of-type(1) {
+      color: #fff;
+      background: linear-gradient(-135deg, #808080, #000000);
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #B2B1B9;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(-135deg, #808080, #000000);
+      height: 50px;
+      font-size: 35px;
+      width: 35%;
+      margin-left: 33%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    body {
+      background-color: #FFF5DE;
+    }
+    #sendBtn{
+  border:0;
+  background:#343050;
+  padding:.5rem;
+  color:white;
+  margin-top:1rem;
+  margin-left: 5rem;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s background ease;
+  border-radius: 5px;
+  
+}
+#sendBtn:hover{
+    background:#3498DB;
+  }
+   #sendBtn2{
+  border:0;
+  background:#343050;
+  padding:.5rem;
+  color:white;
+  margin:1rem 2rem;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s background ease;
+  border-radius: 5px;
+  
+}
+#sendBtn2:hover{
+    background:#3498DB;
+  }
+  </style>
+</head>
+
+<body>
+
+  <h2>Equipment Master Details</h2>
+
+  <table>
+    <tr>
+      <th>Plant</th>
+      <th>Section</th>
+      <th>Location</th>
+      <th>Equipment No.</th>
+      <th>Equipment Desc.</th>
+      <th>Equipment Type</th>
+      <th>Range</th>
+      <th>Accuracy</th>
+      <th>Frequency</th>
+      <th>Last Date</th>
+      <th>Due Date</th>
+      <th>Intimadation Days</th>
+      <th>Status</th>
+      <th>Remarks</th>
+    </tr>
+    {{{display}}}
+
+    
+  
+  
+  </table>
+  <div style="display: inline-block;"><form action="/update" method="get">
+    <button id="sendBtn" type="submit" name="button">Update</button>
+  </form></div>
+  
+  <div style="display: inline-block;">
+    <form action="/deleteone" method="get">
+    <button id="sendBtn2" type="submit" name="button">Delete data</button>
+  </form>
+  </div>
+  <div style="display: inline-block;">
+    <form action="/dataDelAll" method="POST">
+    
+        <button id="sendBtn2" type="submit" name="button">Delete All Data</button>
+      </form>
+  </div>    
+      
+    
+
+</body>
+
+</html>

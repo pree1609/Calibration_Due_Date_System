@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Add new equipment details</title>
+</head>
+<style>
+  
+  *{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #EEEEEE;
+  }
+  
+.header{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30px;
+    height: 35px;;
+    color: #fff;
+    text-align: center;
+    padding: 2% 0;
+    background: linear-gradient(-135deg, #808080, #000000);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 0 100px 0;
+    
+  }
+ 
+
+.form-style{
+  
+  position: relative;
+  max-width:500px;
+  margin:10rem auto;
+  border:2px solid black;
+  padding:2rem;
+  border-radius:5px;
+}
+label{
+    display:block;
+    text-transform:uppercase;
+    font-size:20px;
+  }
+input[type=date] {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+input[type=date]:focus {
+  background-color: lightblue;
+}
+
+input[type=varchar] {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+input[type=varchar]:focus {
+  background-color: lightblue;
+}
+input[type=text] {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #555;
+  outline: none;
+}
+input[type=text]:focus {
+  background-color: lightblue;
+}
+#sendBtn{
+  border:0;
+  background:#343050;
+  padding:.5rem;
+  color:white;
+  margin:1rem 0;
+  width:auto;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:.3s background ease;
+  border-radius: 5px;
+  
+}
+#sendBtn:hover{
+    background:#3498DB;
+  }
+</style>
+
+<body>
+  <h1 class="header">Update Equipment Details:</h1>
+  <div class="div-form-style">
+    <form action="/dataPUT" method="POST" class="form-style">
+    <div >
+        <label for="oldname">Plant (Current):</label><br>
+        <input type="text" id="oldname" name="oldname"><br>
+
+      <label for="name" >Plant (New):</label><br>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="section">Section:</label><br>
+    <input type="text" id="section" name="section"><br>
+
+    <label for="location">Location of use:</label><br>
+    <input type="text" id="location" name="location"><br>
+
+    <label for="equip_no">Equipment No::</label><br>
+    <input type="varchar" id="equip_no" name="equip_no"><br>
+
+    <label for="equip_des">Address:</label><br>
+    <input type="varchar" id="equip_des" name="equip_des"><br>
+
+    <label for="equip_type">Equipment Type:</label><br>
+    <input type="varchar" id="equip_type" name="equip_type"><br>
+
+    <label for="range">Range:</label><br>
+    <input type="varchar" id="range" name="range"><br>
+
+    <label for="accuracy">Accuracy:</label><br>
+    <input type="varchar" id="accuracy" name="accuracy"><br>
+    
+    <label for="frequency">Equipment Type:</label><br>
+    <input type="varchar" id="frequency" name="frequency"><br>
+
+    <label for="lastdate">Last Calibration Done On:</label><br>
+    <input type="date" id="lastdate" name="lastdate"><br>
+   
+    <label for="duedate">Due Date:</label><br>
+    <input type="date" id="duedate" name="duedate"><br>
+    
+    <label for="intidays">Intimation Days:</label><br>
+    <input type="varchar" id="intidays" name="intidays"><br>
+  
+    <label for="status">Status:</label><br>
+    <input type="text" id="status" name="status"><br>
+    
+    <label for="remarks">Remarks:</label><br>
+    <input type="text" id="remarks" name="remarks"><br>
+
+    <p>Click on Submit to record your response</p>
+
+    <button id="sendBtn" type="submit" name="button">Submit</button>
+    </div>
+    
+
+  </form>
+  </div>
+  
+  <table>
+ 
+  </table>
+</body>
+
+</html>
